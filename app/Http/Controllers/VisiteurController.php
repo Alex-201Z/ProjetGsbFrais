@@ -50,16 +50,13 @@ class VisiteurController extends Controller
             return view('vues/formLogin', compact('erreur'));
         }
     }
-    /**
-     * Déconnecte le visiteur authentifié
-     * retourne la vue home
-     */
     public function signOut()
     {
         $serviceVisiteur = new ServiceVisiteur();
         $serviceVisiteur->logout();
         return view('home');
     }
+
 
 
 

@@ -22,7 +22,5 @@ class MonException extends Exception
         return get_class($this) . "'{$this->message}' in {$this->file}({$this->line})\n"
                                 . "{$this->getTraceAsString()}";
     }
-    public function logout() {
-        session::put('id',0);
-    }
+
 }

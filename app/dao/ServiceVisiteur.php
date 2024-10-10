@@ -35,5 +35,7 @@ class ServiceVisiteur
         }
         return $connected;
     }
-
+    public function logout() {
+        session::put('id',0);
+    }
 }
