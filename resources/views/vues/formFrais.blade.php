@@ -1,8 +1,8 @@
-
-
-{!! Form::open(['url' => ' ']) !!}
+@extends('layouts.master')
+@section('content')
+{!! Form::open(['url' => 'validerFrais']) !!}
 <div class="col-md-12  col-sm-12 well well-md">
-    <h1> </h1>
+    <h1>{{$titreVue}}</h1>
     <div class="form-horizontal">
         <input type="hidden" name="id_frais" value="{{$unFrais->id_frais}}"/>
         <div class="form-group">
@@ -21,7 +21,7 @@
         <div class="form-group">
             <label class="col-md-3 col-sm-3 control-label">Montant validé : </label>
             <div class="col-md-3 col-sm-3">
-                <label class="control-label">{{ $unFrais->montant_valide }}</label>
+                <label class="control-label">{{ $unFrais->montantvalide }}</label>
             </div>
         </div>
         <div class="form-group">
@@ -46,3 +46,4 @@
     </div>
 </div>
 {!! Form::close() !!}
+@stop

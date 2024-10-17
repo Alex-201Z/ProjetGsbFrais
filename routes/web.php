@@ -21,4 +21,6 @@ Route::post( '/login',  'App\Http\Controllers\VisiteurController@signIn');
 Route::get( '/getLogin',  'App\Http\Controllers\VisiteurController@signOut');
 Route::get( '/listeFrais',  'App\Http\Controllers\FraisController@getFraisVisiteur');
 Route::get( '/modifierFrais/{id}',  'App\Http\Controllers\FraisController@updateFrais');
-Route::get( '/validerFrais',  'App\Http\Controllers\FraisController@validateFrais');
+Route::post('/validerFrais/{id}','App\Http\Controllers\FraisController@validateFrais');
+Route::get('/ajouteFrais','App\Http\Controllers\FraisController@addFrais');
+Route::post('/validerFrais','App\Http\Controllers\FraisController@validateFrais');
